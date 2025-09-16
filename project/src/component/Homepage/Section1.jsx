@@ -1,8 +1,11 @@
 import React from 'react'
 import { Play, ArrowRight } from "lucide-react";
-
+import { useNavigate } from 'react-router-dom';
 
 function Section1() {
+   const navigate =useNavigate();
+   const handleClick =() =>{navigate('/Apply');};
+   
   return (
     <div>
         
@@ -36,7 +39,9 @@ function Section1() {
             <Play className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Watch Demo
           </button>
-          <button className="text-green-600 hover:bg-gray-600 hover:text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+          <button 
+            onClick={handleClick}
+         className="text-green-600 hover:bg-gray-600 hover:text-white px-6 md:px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
             Start Your Journey
             <ArrowRight className="w-4 h-4 md:w-5 md:h-5 ml-2" />
           </button>
